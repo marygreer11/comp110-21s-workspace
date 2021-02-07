@@ -2,7 +2,7 @@
 
 __author__ = "730394883"
 
-from datetime import datetime, time
+from datetime import datetime, date
 from datetime import timedelta
 
 
@@ -21,4 +21,4 @@ print("Population:", Population)
 print("Doses Administered:", Doses_administered)
 print("Doses Per Day:", Doses_per_day)
 print("Target Percent Vaccinated:", Target_percent_vaccinated)
-print("We will reach", Target_percent_vaccinated, "in", total, "days, which falls on", future_date)
+print("We will reach", Target_percent_vaccinated, "% vaccination in", total, "which falls on", future_date)
