@@ -15,6 +15,8 @@ def main() -> None:
 def fortune_cookie() -> str:
     """Declares fortune."""
     Number: int = randint(1, 100)
+    if Number > 10:
+        return "Good news is coming soon"
     if Number < 30:
      return "You will have a good day"
     if Number < 50:
