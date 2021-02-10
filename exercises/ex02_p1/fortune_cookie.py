@@ -1,7 +1,6 @@
 """Fortune cookie exercise redux as a structured program."""
 
 from random import randint
-from typing import ForwardRef
 
 __author__ = "730394883"
 
@@ -13,14 +12,14 @@ def main() -> None:
     print("Now, go spread positive vibes!")
     return None
 
-
-
 def fortune_cookie() -> str:
-    """Declares fortune"""
-    Number: int =randint(1, 100)
-    if Number > 50:
+    """Declares fortune."""
+    Number: int = randint(1, 100)
+    if Number < 30:
      return "You will have a good day"
     if Number < 50:
+        return "Money is on its way"
+    if Number > 50:
         return "Your dreams will come true"
     if Number == 50:
      return "Love is in the air"
