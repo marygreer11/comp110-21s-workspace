@@ -11,7 +11,7 @@ def main() -> None:
 
 def tar_heels(choice: int) -> str: 
     """Tar heel fans function."""
-    if choice % 2 == 0 and choice %7 == 0:
+    if choice % 2 == 0 and choice % 7 == 0:
         return "TAR HEELS"
     if choice % 2 == 0:
         return "TAR"

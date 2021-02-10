@@ -12,6 +12,7 @@ def main() -> None:
     print("Now, go spread positive vibes!")
     return None
 
+
 def fortune_cookie() -> str:
     """Declares fortune."""
     Number: int = randint(1, 100)
@@ -26,10 +27,7 @@ def fortune_cookie() -> str:
     if Number == 50:
      return "Love is in the air"
                 
-            
-
-
-
+        
 # Python Idiom for "starting" the program when run as a module.
 # The special dunder variable __name__ will be "__main__" when run as module. 
 if __name__ == "__main__":
