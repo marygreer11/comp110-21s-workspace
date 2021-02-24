@@ -4,24 +4,25 @@ __author__ = "730394883"
 
 from random import randint
 player: str = str(input("What is your name? "))
-points: int 
+answer1: int 
+actual1: int = randint(1,2)
+answer2: int 
+actual2: int = randint(1,10)
 def main() -> None:
-    print(greet)
+    """Where program will run"""
+    welcome: None = greet() 
+    print(welcome)
     cont: int = int(input("Would you like to play the game? Choose 1 to continue or choose 2 to quit. "))
     if cont == 1:
-         answer1: int = int(input("What number will the genorator give? 1 or 2? "))
-         actual1: int = randint(1,2)
-         points: int = round1(answer1, actual1)
-         print(points)
-         moving_on: int = int(input("Would you like to continue to round 2? Press 1 to continue and 2 to quit. "))
-         if moving_on == 1:
+        answer1: int = int(input("What number will the generator give? 1 or 2? "))
+        points: int = round1(answer1, actual1)
+        moving_on: int = int(input("Would you like to continue to round 2? Press 1 to continue and 2 to quit. "))
+        if moving_on == 1:
             answer2: int = int(input("What number will the genorater give? Between 1-10. "))
-            actual2: int = randint(1,10)
             points: int = (points)+ (round2(answer2, actual2))
-            print(points)
             NAMED_CONSTANT: str = "\U0001f600"
-            print(f"Congratulations, you have earned {points} points during the game. Come play again, {NAMED_CONSTANT}, !")
-         else:
+            print(f"Congratulations, {player}, you have earned {points} points during the game. Come play again, {NAMED_CONSTANT}, !")
+        else:
             if moving_on == 2:
                 print("Thank you for stopping by the Ultimate Guessing game! Your session has now ended.")
     else:
@@ -33,11 +34,10 @@ def greet() -> None:
     """Greeting the player"""
     print(f"Hello {player}, welcome to the Ultimate Guessing Game!")
     return None
-
+    
 def round1(Answer1: int, Actual1: int) -> int:
     """First round of the game."""
-    answer1: int = int(input("What number will the genorator give? 1 or 2? "))
-    actual1: int = randint(1,2)
+    answer1: int = int(input("What number will the generator give? 1 or 2? "))
     points1: int = 1 or 0
     if answer1 == actual1:
         points1 == 1
@@ -51,7 +51,6 @@ def round1(Answer1: int, Actual1: int) -> int:
 def round2(Answer2: int, Actual2: int) -> int:
     """Second round of the game."""
     answer2: int = int(input("What number will the genorater give? Between 1-10. "))
-    actual2: int = randint(1,10)
     points2: int = 1 or 0 
     if answer2 == actual2:
         points2 = 1
