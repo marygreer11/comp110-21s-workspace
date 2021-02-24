@@ -3,9 +3,10 @@
 __author__ = "730394883"
 
 from random import randint
+player: str = str(input("What is your name? "))
+points: int 
 def main() -> None:
-    Greeting: None = greet()
-    print(Greeting)
+    print(greet)
     cont: int = int(input("Would you like to play the game? Choose 1 to continue or choose 2 to quit. "))
     if cont == 1:
          answer1: int = int(input("What number will the genorator give? 1 or 2? "))
@@ -30,7 +31,6 @@ def main() -> None:
 
 def greet() -> None:
     """Greeting the player"""
-    player: str = str(input("What is your name? "))
     print(f"Hello {player}, welcome to the Ultimate Guessing Game!")
     return None
 
