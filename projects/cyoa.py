@@ -4,6 +4,7 @@ __author__ = "730394883"
 
 from random import randint
 
+
 def main() -> None:
     """Where program will run."""
     greet()
@@ -29,7 +30,7 @@ def main() -> None:
 
 def greet() -> None:
     """Greeting the player."""
-    player: str = str(input("What is your name? "))
+    player: str = input("What is your name? ")
     print(f"Hello {player}, welcome to the Ultimate Guessing Game!")
     
 
