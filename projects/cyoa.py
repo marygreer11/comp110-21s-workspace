@@ -13,14 +13,14 @@ def main() -> None:
     if cont == 1:
         answer1: int = int(input("What number will the generator give? 1 or 2? "))
         actual1: int = randint(1, 2)
-        global points
-        points: int = points + round1(answer1, actual1)
+        round1(answer1, actual1)
         moving_on: int = int(input("Would you like to continue to round 2? Press 1 to continue and 2 to quit. "))
         if moving_on == 1:
             answer2: int = int(input("What number will the genorater give? Between 1-10. "))
             actual2: int = randint(1, 10)
+            round2(answer2, actual2)
             global points
-            points: int = points + round2(answer2, actual2)
+            points = points + round1(answer1, actual1) + round2(answer2, actual2)
             NAMED_CONSTANT: str = "\U0001f600"
             print(f"Congratulations, you have earned {points} points during the game.,{NAMED_CONSTANT}, !")
         else:
@@ -34,7 +34,7 @@ def main() -> None:
 def greet() -> None:
     """Greeting the player."""
     global player
-    player: str = input("What is your name? ")
+    player = input("What is your name? ")
     print(f"Hello {player}, welcome to the Ultimate Guessing Game!")
     
 
