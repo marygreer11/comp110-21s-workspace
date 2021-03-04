@@ -10,24 +10,27 @@ def main() -> None:
 
 
 def is_prime(x:int) -> bool:
+    """Identifying prime numbers."""
     if x <= 1:
-       return False
+       return True
     else:
      if x % 2 or 3 == 0:
-        return True
+        return False
      else:
           if x % 2 or 3 != 0:
-              return False
+              return True
+    return True or False
 
 
 def list_primes(min: int, max: int) -> list[int]:
-   final_list: list[int] = [0]
-   for num in range(min, max):
+    """Making a list of primes."""
+    final_list: list[int] = []
+    for num in range(min, max):
      while num >= 1:
-         if is_prime(num) == False:
+         if is_prime(num) is False:
              break
          else:
-             if is_prime(num) == True:
+             if is_prime(num) is True:
                 final_list.append(num)
          num += 1
          return final_list
