@@ -36,11 +36,5 @@ def list_primes(min: int, max: int) -> list[int]:
          return final_list
    
         
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
