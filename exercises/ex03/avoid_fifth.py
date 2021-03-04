@@ -12,8 +12,8 @@ def main() -> None:
 def avoid_fifth(xs: str) -> str:
     """Taking out the Es."""
     while len(xs) > 0:
-        delattr(xs, 'e') 
-    return xs
+        new_xs: str = xs.translate({ord('e'): None})
+    return new_xs
 
         
 if __name__ == "__main__":
