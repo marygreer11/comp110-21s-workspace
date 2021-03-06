@@ -14,12 +14,11 @@ def palindromify(x: str, y: bool) -> str:
     if y is True:
         middle: int = int(len(x) / 2)
         final: str = (x[1: middle] + x[middle: len])
-        return final
     else:
         if y is False:
             mid: int = int(len(x) / 2) - 1
-            finalfalse: str = (x[1: mid] + x[mid:len])
-            return finalfalse
+            final = (x[1: mid] + x[mid:len])
+    return final
     
 
 if __name__ == "__main__":
