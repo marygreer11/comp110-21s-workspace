@@ -15,13 +15,11 @@ def main() -> None:
 def palindromify(x: str, y: bool) -> str:
     """Mirroring words."""
     if y is True:
-        middle: int = int(len(x) / 2)
-        final = (x[1: middle] + x[middle: len])
+        final: str = (x[1: (len(x) / 2)] + x[(len(x) / 2): len(x)])
     else:
         if y is False:
-            mid: int = int(len(x) / 2) - 1
-            final = (x[1: mid] + x[mid:len])
-    return Final
+            final: str = (x[1:((len(x) / 2) - 1)] + x[((len(x) / 2) -1):len])
+    return final
     
 
 if __name__ == "__main__":
