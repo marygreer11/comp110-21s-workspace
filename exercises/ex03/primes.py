@@ -6,18 +6,18 @@ __author__: str = "730394883"
 def main() -> None:
     """Entrypoint of the program."""
     print(is_prime(31))
-    print(list_primes(3,7))
+    print(list_primes(3, 7))
 
 
-def is_prime(x:int) -> bool:
+def is_prime(x: int) -> bool:
     """Identifying prime numbers."""
     if x <= 1:
        return True
     else:
-     if x % 2 or 3 == 0:
-        return True
-     else:
-          if x % 2 or 3 != 0:
+        if x % 2 or 3 == 0:
+            return True
+        else:
+            if x % 2 or 3 != 0:
               return False
     return True or False
 
