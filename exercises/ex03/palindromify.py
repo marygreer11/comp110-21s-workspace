@@ -1,7 +1,5 @@
 """EX03 - palindromify function."""
 
-from typing import Final
-
 
 __author__: str = "730394883"
 

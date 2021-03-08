@@ -11,15 +11,17 @@ def main() -> None:
 
 def is_prime(x: int) -> bool:
     """Identifying prime numbers."""
-    if x <= 1:
-       return True
+    prime = False
+    if x < 2:
+        return False
     else:
-        if x % 2 or 3 == 0:
+        for num in range(2, x):
+            if x % num == 0:
+                prime = True
+                break
+            if prime == True:
+                return False
             return True
-        else:
-            if x % 2 or 3 != 0:
-              return False
-    return True or False
 
 
 def list_primes(x: int, y: int) -> list[int]:
