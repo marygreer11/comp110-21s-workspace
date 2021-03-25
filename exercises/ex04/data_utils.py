@@ -14,22 +14,23 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
         rows.append(row)
     return rows
 
-def column_values(csv_file: str) -> list[dict[str,str]]:
-    """Read a CSV file's contents into a list of columns."""
-    columns: list[dict[str, str]] = []
-    csv_reader = DictReader(csv_file)
-    for column in csv_reader:
-        columns.append(column)
-    return columns
 
-def columnar(data_rows: list[dict[str, str]]) -> dict[str, list[str]]:
+def column_values(rows: list[dict[str, str]], key: str) -> list[str]:
+    """Read a CSV file's contents into a list of columns."""
+    values: list[str] = []
+    for row in rows:
+        values.append(row[key])
+    return values
+        
+ 
+def columnar(rows: list[dict[str, str]]) -> dict[str, list[str]]:
     """Read a CSV file's contents into a list of columns."""
     dict_of_columns: dict[str, list[str]] = {}
-    for name in data_rows[0]:
-        dict_of_columns.update.key(name)
-    for value in data_rows[1: len(data_rows)]:
-        dict_of_columns.update.value(value)
+    for col in rows[0]:
+        dict_of_columns[col] = column_values(rows, col)
     return dict_of_columns
+
+        
 
 
         
