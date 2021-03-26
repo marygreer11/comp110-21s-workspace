@@ -30,7 +30,19 @@ def columnar(rows: list[dict[str, str]]) -> dict[str, list[str]]:
         dict_of_columns[col] = column_values(rows, col)
     return dict_of_columns
 
-        
+
+def head(dict_of_columns: dict[str, list[str]], N: int) -> dict[str, list[str]]: 
+    """Only show a certain number of rows"""
+    head_dict: dict[str, list[str]] = {}
+    for row in dict_of_columns:
+        show: list[str] = []
+        i = 0
+        while i <= N:
+            show.append(dict_of_columns[row][i])
+            i += 1
+        head_dict[row] = show
+    return head_dict
+    
 
 
         
@@ -42,4 +54,3 @@ def columnar(rows: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 
-# TODO: Define the other functions here.
