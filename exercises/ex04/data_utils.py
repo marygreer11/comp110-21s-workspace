@@ -8,10 +8,12 @@ from csv import DictReader
 
 def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
     """Read a CSV file's contents into a list of rows."""
+    File_handle = open(csv_file, "r", encoding= "utf8")
     rows: list[dict[str, str]] = []
-    csv_reader = DictReader(csv_file)
+    csv_reader = DictReader(File_handle)
     for row in csv_reader:
         rows.append(row)
+    File_handle.close()
     return rows
 
 
